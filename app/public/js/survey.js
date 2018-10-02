@@ -20,10 +20,12 @@ $("#submit").on("click", function (event) {
         return isValid;
     }
 
+    let userData = {};
+
     // If all required fields are filled
     if (validateForm()) {
         // Create an object for the user"s data
-        var userData = {
+        userData = {
             name: $("#name").val(),
             photo: $("#photo").val(),
             scores: [
