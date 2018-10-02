@@ -54,6 +54,6 @@ $("#submit").on("click", function (event) {
 
         });
     } else {
-        alert("Please fill out all fields before submitting!");
+        $("#form-error-modal").modal("toggle");
     }
 });
