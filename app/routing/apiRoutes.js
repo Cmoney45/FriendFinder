@@ -12,6 +12,7 @@ module.exports = function (app) {
         console.log(req.body);
         let bestMatch = [];
         let bestMatchScore = 50;
+        let bestMatchID = 0;
 
         // For every friend stored in our data, loop through and calculate the difference between scores.
         for (friend in friendData) {
@@ -27,13 +28,14 @@ module.exports = function (app) {
             if (totalDifference < bestMatchScore) {
                 bestMatch = (friendData[friend]);
                 bestMatchScore=totalDifference;
+                bestMatchID = friend;
             }
         }
         // After the above friend search is ran, push the new friend sent in to the data/friends array
         friendData.push(req.body);
 
         // Send back the best match object to be used in the JS
-        res.json(bestMatch);
+        res.json([bestMatch,bestMatchID]);
 
     });
 

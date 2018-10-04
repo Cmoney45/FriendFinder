@@ -12,3 +12,12 @@ nav,
     background-repeat: repeat;
     padding: 20px; 
 }
+
+#match-img {
+    width: 400px;
+    height: 400px;
+}
+
+.hideMe {
+    display: none;
+};
