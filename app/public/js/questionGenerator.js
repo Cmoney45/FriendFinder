@@ -1,14 +1,14 @@
 // List of questions
 const  questions = [
-    "Your mind is always buzzing with unexplored ideas and plans.",
-    "Generally speaking, you rely more on your experience than your imagination.",
+    "The wilderness is a nice place to visit, but I wouldn't want to live there.",
     "You find it easy to stay relaxed and focused even when there is some pressure.",
     "You rarely do something just out of sheer curiosity.",
     `How would you rate "Star Wars - The Last Jedi?`,
-    "It is often difficult for you to relate to other people’s feelings.",
-    "In a discussion, truth should be more important than people’s sensitivities.",
+    "Your mind is always buzzing with unexplored ideas and plans.",
+    "There's a right way to do things and a wrong way to do things.",
+    "If you want to make a lot of money, it is important to be educated.",
     "You rarely get carried away by fantasies and ideas.",
-    "You think that everyone’s views should be respected regardless of whether they are supported by facts or not.",
+    "You think it would be interesting to have a supernatural experience.",
     "You feel more energetic after spending time with a group of people."
 ];
 // Max value for our questionaire scale
