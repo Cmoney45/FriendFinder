@@ -21,3 +21,7 @@ nav,
 .hideMe {
     display: none;
 };
+
+img {
+    width: 400px;
+}
