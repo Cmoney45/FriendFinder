@@ -1,14 +1,14 @@
 
-var friendData = require("../data/friends");
+const friendData = require("../data/friends");
 
-module.exports = function (app) {
+module.exports = (app) => {
 
-    app.get("/api/friends", function (req, res) {
+    app.get("/api/friends", (req, res) => {
         res.json(friendData);
     });
 
 
-    app.post("/api/friends", function (req, res) {
+    app.post("/api/friends", (req, res) => {
         console.log(req.body);
         let bestMatch = [];
         let bestMatchScore = 50;

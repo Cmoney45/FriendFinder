@@ -16,7 +16,7 @@ const questions = [
 const maxScale = 5;
 
 if (localStorage.getItem("submitted")) {
-    $.get(`/api/friends`, function (req, res) {
+    $.get(`/api/friends`, (req, res) => {
         const friendPosition = parseInt(localStorage.getItem("place"))
         const yourPosition = parseInt(localStorage.getItem("uPosition"))
 
@@ -29,7 +29,7 @@ if (localStorage.getItem("submitted")) {
         else {
             // Start second validation
             // Create get Sum again
-            function getSum(total, num) {
+            const getSum = (total, num) => {
                 return parseInt(total) + parseInt(num);
             }
             // Check your spots positions current score values
@@ -72,7 +72,7 @@ else {
 }
 
 // Chosen CSS
-function chosenCSS() {
+const chosenCSS = () => {
     const config = {
         ".chosen-select": {},
         ".chosen-select-deselect": {
@@ -94,7 +94,7 @@ function chosenCSS() {
     }
 };
 
-function displayQuestions() {
+const displayQuestions = () => {
     for (quest in questions) {
         const mainDiv = $(`<div>`);
         const questionHead = $(`<h3><strong>Question ${parseInt(quest) + 1}</strong></h3>`)

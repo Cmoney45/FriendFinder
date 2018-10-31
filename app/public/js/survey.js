@@ -1,13 +1,13 @@
 // Capture the form inputs
-$("#submit").on("click", function (event) {
+$("#submit").on("click", event => {
     event.preventDefault();
     // Form validation
-    function validateForm() {
-        var isValid = true;
-        $(".form-control").each(function () {
+    const validateForm = () => {
+        let isValid = true;
+        $(".form-control").each(() => {
             if ($(this).val() === "") {
                 isValid = false;
-            }
+            };
         });
 
         $(".chosen-select").each(function () {
@@ -47,7 +47,7 @@ $("#submit").on("click", function (event) {
             };
 
             // AJAX post the data to the friends API.
-            $.post("/api/friends", userData, function (data) {
+            $.post("/api/friends", userData, data => {
 
                 // Grab the result from the AJAX post so that the best match's name and photo are displayed.
                 $("#match-name").text(data[0].name);
@@ -58,7 +58,7 @@ $("#submit").on("click", function (event) {
                 $("#results-modal").modal("toggle");
 
             });
-            $.get(`/api/friends`, function(req, res) {
+            $.get(`/api/friends`, (req, res) => {
                 localStorage.setItem("uPosition", (req.length - 1));
                 // Create get sum to setup an additional check
                 function getSum(total, num) {
@@ -75,7 +75,7 @@ $("#submit").on("click", function (event) {
     }
 });
 
-$(`#reset`).on("click", function(event){
+$(`#reset`).on("click", event => {
     //TODO go to database and remove your localstorage place value
     localStorage.clear();
     window.location.reload();

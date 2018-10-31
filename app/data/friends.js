@@ -1,6 +1,6 @@
 const friends = [];
 
- function createFriend (name, photo) {
+ const createFriend = (name, photo) => {
     let newFriend = {
         "name": name,
         "photo": photo,
